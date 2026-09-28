@@ -1,0 +1,15 @@
+{
+  "edition": "50k",
+  "badgeLanguage": "en",
+  "uiLanguage": "zh-CN",
+  "count": 50000,
+  "defaultTheme": "green",
+  "glbSha256": "06b651368c1f3efa3575a2dfd6d189e2cba36683544d2db84893f9b1f97fafc7",
+  "original100kFilesUnchanged": 55,
+  "javascriptSyntaxChecked": 32,
+  "moduleReferencesResolved": 63,
+  "geometryMaterialIntegration": "passed: 11 meshes, 2 textures, material edits/reload/dispose",
+  "uiBehavior": "passed: today date, midnight, share/cancel/fallback, confirm",
+  "animationAndLayout": "identical to 100k baseline",
+  "visualAcceptance": "Browser unavailable: automation kernel and headless browser failed to launch; GPU visual validation pending"
+}

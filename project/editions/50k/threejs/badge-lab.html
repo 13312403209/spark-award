@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#111316"><title>50k · Badge Lab · 星火奖</title>
+<link rel="icon" href="data:,"><link rel="stylesheet" href="./badge-lab.css">
+<script type="importmap">{"imports":{"three":"./vendor/three/three.module.js","three/addons/":"./vendor/three/addons/"}}</script>
+</head>
+<body>
+<header class="lab-header"><div><span class="logo">✧</span><strong>Badge Lab</strong><span class="project">SPARK AWARD</span></div><a href="./index.html" target="_blank" rel="noopener">打开解锁页 ↗</a></header>
+<main>
+<section class="viewport" aria-label="徽章 3D 调试视图">
+<div class="view-toolbar" role="group" aria-label="固定视角"><button data-view="front" aria-pressed="true">正视</button><button data-view="side" aria-pressed="false">侧视</button><button data-view="back" aria-pressed="false">背视</button><button data-view="perspective" aria-pressed="false">透视</button></div>
+<canvas id="lab-scene" tabindex="0" aria-label="拖动旋转，滚轮缩放，右键拖动平移；1 正视、2 侧视、3 背视、4 透视"></canvas>
+<div class="viewport-footer"><span>拖动旋转 · 滚轮缩放 · 右键平移</span><span id="dimensions">—</span></div>
+<p id="loading" role="status">正在加载 GLB…</p>
+</section>
+<aside class="inspector" aria-label="模型参数">
+<section><div class="section-heading"><h1>模型参数</h1><span id="dirty" class="pill">已应用</span></div><p class="muted">与正式解锁页共用同一模型。</p></section>
+<section><h2>源文件</h2><code>assets/Spark_Award_50K.glb</code><button id="reload" class="wide">↻ 重新加载 GLB</button><p class="hint">保留 Blender 几何、倒角、浮雕和内嵌贴图。替换 GLB 后可直接重载。</p></section>
+<section><h2>主题</h2><label class="sr-only" for="theme">奖牌主题</label><select id="theme"><option value="green">50k · 黄绿色原色</option></select><p class="hint">独立调节 50k 四组材质，保留模型原始颜色和渐变。</p></section>
+<section><h2>分区材质</h2><label class="sr-only" for="material-role">材质区域</label><select id="material-role"><option value="Body">Body · 主体</option><option value="Star">Star · 星形</option><option value="Text">Text · 正反面文字</option><option value="Recess">Recess · 凹槽</option></select>
+<label class="range-label" for="color">颜色 <output id="color-value"></output></label><input id="color" type="color" value="#ffffff" style="width:100%;height:32px;margin-top:8px;border:0;background:none">
+<label class="range-label" for="metalness">金属度 <output id="metalness-value"></output></label><input id="metalness" type="range" min="0" max="1" step="0.01">
+<label class="range-label" for="roughness">粗糙度 <output id="roughness-value"></output></label><input id="roughness" type="range" min="0" max="1" step="0.005">
+<label class="range-label" for="envMapIntensity">环境反射 <output id="envMapIntensity-value"></output></label><input id="envMapIntensity" type="range" min="0" max="4" step="0.01">
+<p class="hint">颜色叠乘原始贴图；白色恢复原色。倒角与背面文字保留原有明暗差异。</p></section>
+<section><h2>网页校色</h2><p class="hint" id="color-pipeline"></p></section>
+<section><h2>辅助显示</h2><label class="toggle"><span>坐标轴 <small>X / Y / Z</small></span><input id="axes" type="checkbox"></label><label class="toggle"><span>包围盒 <small>BoundingBox</small></span><input id="bounds" type="checkbox"></label><p class="hint">白光与正式页一致。辅助线仅在此页显示。</p></section>
+<section class="apply-section"><button id="apply" class="primary wide">应用到正式页</button><div class="button-row"><button id="export">导出配置</button><button id="defaults">恢复默认</button></div><p class="hint">应用后刷新同一浏览器中的解锁页。要让其他设备也使用此配置，导出并替换项目的 BadgeThemeConfig.js。</p><p id="lab-status" role="status" aria-live="polite"></p></section>
+</aside>
+</main>
+<script type="module" src="./badge-lab.js"></script>
+</body></html>
