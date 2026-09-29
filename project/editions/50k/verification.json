@@ -11,5 +11,29 @@
   "geometryMaterialIntegration": "passed: 11 meshes, 2 textures, material edits/reload/dispose",
   "uiBehavior": "passed: today date, midnight, share/cancel/fallback, confirm",
   "animationAndLayout": "identical to 100k baseline",
-  "visualAcceptance": "Browser unavailable: automation kernel and headless browser failed to launch; GPU visual validation pending"
+  "visualAcceptance": "Browser unavailable: automation kernel and headless browser failed to launch; GPU visual validation pending",
+  "openingVideo": {
+    "updated": "2026-09-29",
+    "sourceFile": "视频.mp4",
+    "sourceSha256": "e704e50b92458c2e5bd28dcec1579a0e9befb37f0af468ec6acc20501d9504e7",
+    "outputSha256": "ab1c78732eb8a0f88767a6fce0a91d2a487d02631b12deca23df1aca74becc58",
+    "frames": 121,
+    "fps": 24,
+    "durationSeconds": 5.041666666666667,
+    "dimensions": [
+      720,
+      720
+    ],
+    "audio": false,
+    "boundsAllFrames": [
+      121,
+      88,
+      618,
+      630
+    ],
+    "processing": "center square crop and resize; original black background and colors retained; no chroma key",
+    "decodedFramesChecked": 121,
+    "scope": "only 50k opening media replaced; 100k and runtime code unchanged",
+    "gpuBrowserVerification": "not performed"
+  }
 }
